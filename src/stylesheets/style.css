@@ -1,0 +1,148 @@
+body {
+	display: block!important;
+	color: #666;
+	font: 13px Arial, sans-serif;
+	line-height: 20px;
+	background: #f2f2f2;
+	margin: 0;
+}
+
+a {
+	color: #666;	
+	text-decoration: none;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #909090;
+	text-decoration: underline;
+}
+
+/* Headings */
+h1 {
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+
+p.description {
+	margin-bottom: 30px;
+}
+
+p.description .fa {
+	font-size: 30px;
+	color: #E4E0E0;
+}
+
+.profile-pic {
+	margin: auto;
+	width: 73px;
+	box-sizing: content-box;
+	border: 10px solid #E4E3E3;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.profile-pic img {
+	width: 100%;
+}
+
+	/* Common class */
+.clear {
+	clear: both;
+}
+
+.alpha { 
+	padding-left: 0 !important; 
+}
+
+.omega { 
+	padding-right: 0 !important; 
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* Header */
+header {
+	padding: 15px 0 10px;
+	background: #CCC;
+	width: 100%;
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(51,51,51,.5); 
+	-moz-box-shadow: 0px 1px 5px 0px rgba(51,51,51,.5); 
+	box-shadow: 0px 1px 5px 0px rgba(51,51,51,.5);
+	z-index: 99999;
+}
+
+.navbar-brand:hover {
+	opacity: 0.7;
+}
+
+/* Hero */
+#hero {
+	min-height: 500px;
+	background: pink;
+	padding: 70px 0;
+}
+
+/* Main Content */
+#main {
+	padding: 70px 0;
+	min-height: 800px;
+}
+
+/* Footer */
+footer {
+	background: #272727;
+	color: #ffffff;
+	padding: 15px 0 10px;
+}
+footer a {
+	font-weight: 700;
+	color: #ffffff;
+}
+
+
+/* Preloader */
+#mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #F6F6F6;
+	z-index: 10000;
+	height: 100%;
+}
+#loader {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-image: url("../../assets/img/loading.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: -100px 0 0 -100px;
+}
+
+/* Desktop small screen */
+@media (min-width: 992px) {
+	.wrapper {
+		width: 85%;
+	}
+}
+
+/* Desktop large screen */
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 1000px;
+	}
+}

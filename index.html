@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Favorite Twitter Fetcher</title>
+    <meta name="description" content="Description.">
+    <meta name="keywords" content="Keywords">
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
+
+    <style type="text/css">
+        body {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body >
+
+<div id="main" class="text-center" ng-controller="TwitterController as ctx">
+    <div class="wrapper">
+        <div class="profile-pic" ng-show="ctx.user.picture">
+            <img src="assets/img/logo.png" data-img="{{ctx.user.picture}}" class="img-responsive" alt="{{ctx.user.name}}"/>
+        </div>
+        <h1><a href="https://twitter.com/{{ctx.user.name}}" target="_blank">@{{ctx.user.name}}</a></h1>
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <p class="description">" {{ctx.user.description}} "</p>
+            </div>
+        </div>
+        <ul class="list-group text-left">
+            <li class="list-group-item" ng-repeat="tweet in ctx.tweets">
+                <a href="https://twitter.com/{{tweet.userName}}/status/{{tweet.id}}" target="_blank">
+                    {{tweet.text}}
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Preloader -->
+    <div id="mask" ng-show="ctx.isLoading">
+        <div id="loader"></div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="wrapper">
+        Created by <a href="http://www.chifront.com">CHIPUTERA</a>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+</html>
